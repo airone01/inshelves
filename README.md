@@ -1,38 +1,55 @@
-<p align="center"><img src="https://i.imgur.com/a9QWW0v.png"></p>
+# Inshelves
 
-## Usage
+I'm pretty disapointed at Steam all the videogame clients and stores, so I decided to make mine.
 
-### Create an App
+## Current state
 
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-tailwindcss
+![](https://i.imgur.com/JlZrCqp.png)
 
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-tailwindcss
+## Try it yourself
 
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-tailwindcss
-```
+```bash
+# clone the repo
+$ git clone
 
-### Install Dependencies
+# install the dependencies
+$ yarn
 
-```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
+# run the dev server
+$ yarn dev
 ```
 
-### Use it
+## TODO / Milestones
 
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+* [ ] Native UI support for:
+  * [X] Windows
+  * [ ] OSX
+  * [ ] Linux ?
+    * [ ] GNOME
+    * [ ] KDE (bruh)
+* [ ] Navbar (left-sided)
+* [ ] Game list (UI)
+* [ ] Quicksearch (search bar)
+* [ ] Responsivity lol
+* [ ] Game stores integrations:
+  * [ ] Steam
+  * [ ] Epic Games
+  * [ ] Ubisoft Connect
+  * [ ] Rockstar Games
+  * [ ] Riot Games
+  * [ ] Origin
+  * [ ] Minecraft:
+    * [ ] Minecraft (Java Edition)
+    * [ ] Minecraft (Windows 10 Edition)
+    * [ ] Curseforge / Twitch
+    * [ ] Badlion, Lunar... (other clients) ?
+  * [ ] Itch.io
+  * [ ] osu! / osu!lazer
+  * [ ] RetroArch
+* [ ] Additional integrations
+  * [ ] Achievements / trophies / completitions
+  * [ ] Spotify
+  * [ ] Discord
+  * [ ] Install / uninstall games (supported stores)
+  * [ ] Game time and tracking
+* [ ] Actual server-sided ideas
