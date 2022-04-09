@@ -1,0 +1,35 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+html,
+body {
+  @apply bg-transparent text-white no-drag no-select;
+}
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+.drag {
+  -webkit-app-region: drag;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+.no-select {
+  user-select: none;
+}
+.select {
+  user-select: auto;
+}
