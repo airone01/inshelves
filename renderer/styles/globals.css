@@ -21,15 +21,23 @@ body {
 /* Stop purging. */
 
 /* Your own custom utilities */
-.drag {
-  -webkit-app-region: drag;
-}
-.no-drag {
-  -webkit-app-region: no-drag;
-}
-.no-select {
-  user-select: none;
-}
-.select {
-  user-select: auto;
+@layer base {
+  .drag {
+    -webkit-app-region: drag;
+  }
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+  .no-select {
+    user-select: none;
+  }
+  .select {
+    user-select: auto;
+  }
+  .smooth {
+    @apply transition duration-150;
+  }
+  .title-button {
+    @apply smooth rounded-b-sm;
+  }
 }

@@ -7,4 +7,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  content: [
+    './pages/**/*.{js,jsx,ts,tsx,vue}',
+    './components/**/*.{js,jsx,ts,tsx,vue}',
+  ]
 };

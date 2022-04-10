@@ -1,14 +1,16 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
-import TitleBar from './titlebar';
+
+import UI from '../components/UI';
 
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
-      <TitleBar />
-      <Component {...pageProps} />
+      <UI>
+        <Component {...pageProps} />
+      </UI>
     </React.Fragment>
   )
 }

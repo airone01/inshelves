@@ -4,7 +4,7 @@ I'm pretty disapointed at Steam all the videogame clients and stores, so I decid
 
 ## Current state
 
-![](https://i.imgur.com/JlZrCqp.png)
+![](https://i.imgur.com/yzVxSHs.png)
 
 ## Try it yourself
 
@@ -27,10 +27,10 @@ $ yarn dev
   * [ ] Linux ?
     * [ ] GNOME
     * [ ] KDE (bruh)
-* [ ] Navbar (left-sided)
+* [X] Sidebar
 * [ ] Game list (UI)
 * [ ] Quicksearch (search bar)
-* [ ] Responsivity lol
+* [X] Responsivity (kinda)
 * [ ] Game stores integrations:
   * [ ] Steam
   * [ ] Epic Games
