@@ -47,6 +47,7 @@ body {
     grid-gap: 20px;
   }
   .game-item {
+    @apply block;
   }
   .game-item::after {
     content: "";
