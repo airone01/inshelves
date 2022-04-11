@@ -42,16 +42,15 @@ body {
   }
   
   .game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: 1fr;
+    @apply grid grid-rows-1;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 20px;
   }
-  .game-item:before {
+  .game-item {
+  }
+  .game-item::after {
     content: "";
     display: block;
-    height: 0;
-    width: 0;
-    padding-bottom: calc(9/6 * 100%);
+    padding-bottom: calc(81/59 * 100%);
   }
 }

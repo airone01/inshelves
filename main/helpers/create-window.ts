@@ -81,6 +81,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
   };
   win = new BrowserWindow(browserOptions);
   win.setMenu(null);
+  win.webContents.openDevTools()
 
   win.on('close', saveState);
 

@@ -4,7 +4,7 @@ I'm pretty disapointed at Steam all the videogame clients and stores, so I decid
 
 ## Current state
 
-![](https://i.imgur.com/yzVxSHs.png)
+![Demo of the current state of the UI](https://i.imgur.com/yzVxSHs.png)
 
 ## Try it yourself
 
