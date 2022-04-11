@@ -42,16 +42,14 @@ body {
   }
   
   .game-grid {
-    @apply grid grid-rows-1;
+    @apply grid gap-5;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 20px;
   }
   .game-item {
-    @apply block;
+    @apply object-cover w-full overflow-hidden;
+    aspect-ratio: 59/81;
   }
-  .game-item::after {
-    content: "";
-    display: block;
-    padding-bottom: calc(81/59 * 100%);
+  .game-item:first-child {
+    height: calc(100% - 1rem);
   }
 }
