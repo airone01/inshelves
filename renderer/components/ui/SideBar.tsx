@@ -18,12 +18,12 @@ function SideBar (): React.ReactElement {
       <div className='flex flex-row justify-evenly items-center h-8 w-12 fixed top-0 left-0 z-10 no-select no-drag'>
         <button className="h-full w-full flex justify-center items-center hover:bg-gray-700 title-button">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="24px" width="24px" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <button className="h-full w-full flex justify-center items-center hover:bg-gray-700 title-button">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="24px" width="24px" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>

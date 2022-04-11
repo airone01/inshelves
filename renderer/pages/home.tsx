@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Library from '../components/Library';
+import GridLibrary from '../components/GridLibrary';
 
 function Home(): React.ReactElement {
   return (
     <>
-      <Library />
+      <GridLibrary />
     </>
   );
 }

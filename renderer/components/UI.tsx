@@ -1,3 +1,4 @@
+import os from 'os';
 import React from 'react';
 
 import SideBar from './ui/SideBar';
@@ -12,8 +13,8 @@ class UI extends React.Component {
     return (
       <>
         <SideBar />
-        <div className='w-full h-screen pl-14'>
-          <TitleBar />
+        <div className='w-full h-screen pl-12'>
+          {os.platform() === 'win32' && <TitleBar />}
           {this.props.children}
         </div>
       </>

@@ -7,11 +7,11 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <React.Fragment>
+    <>
       <UI>
         <Component {...pageProps} />
       </UI>
-    </React.Fragment>
+    </>
   )
 }
 

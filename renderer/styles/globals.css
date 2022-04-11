@@ -8,7 +8,7 @@
 
 html,
 body {
-  @apply bg-transparent text-white no-drag no-select;
+  @apply bg-gray-500 text-white no-drag no-select;
 }
 
 /* Write your own custom component styles here */
@@ -39,5 +39,19 @@ body {
   }
   .title-button {
     @apply smooth rounded-b-sm;
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+  }
+  .game-item:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    padding-bottom: calc(9/6 * 100%);
   }
 }

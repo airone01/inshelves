@@ -1,9 +1,10 @@
 import {
   BrowserWindowConstructorOptions,
+  BrowserWindow,
   screen,
 } from 'electron';
-import { BrowserWindow } from 'electron-acrylic-window';
 import Store from 'electron-store';
+import os from 'os';
 
 export default (windowName: string, options: BrowserWindowConstructorOptions): BrowserWindow => {
   const key = 'window-state';
@@ -70,12 +71,8 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
   const browserOptions: BrowserWindowConstructorOptions = {
     ...options,
     ...state,
-    titleBarStyle: 'hidden',
-    vibrancy: {
-      theme: '#363636cc',
-      effect: 'blur',
-      disableOnBlur: false,
-    },
+    titleBarStyle: os.platform() === 'win32' ? 'hidden' : 'default',
+    frame: !(os.platform() === 'win32'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -83,6 +80,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
     },
   };
   win = new BrowserWindow(browserOptions);
+  win.setMenu(null);
 
   win.on('close', saveState);
 
