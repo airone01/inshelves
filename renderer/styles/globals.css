@@ -40,16 +40,22 @@ body {
   .title-button {
     @apply smooth rounded-b-sm;
   }
-  
   .game-grid {
-    @apply grid gap-5;
+    @apply grid gap-1;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   .game-item {
     @apply object-cover w-full overflow-hidden;
     aspect-ratio: 59/81;
   }
-  .game-item:first-child {
-    height: calc(100% - 1rem);
+  .game-item div {
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+  }
+  .game-item:hover * {
+    @apply transform scale-105;
+  }
+  .game-item:hover div:first {
+    @apply blur-md scale-110;
   }
 }
