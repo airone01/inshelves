@@ -1,8 +1,8 @@
 import os from 'os';
 import React from 'react';
 
-import SideBar from './ui/SideBar';
-import TitleBar from './ui/TitleBar';
+import SideBar from './SideBar';
+import TitleBar from './TitleBar';
 
 class UI extends React.Component {
   constructor (props) {

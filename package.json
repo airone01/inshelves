@@ -11,11 +11,15 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@types/uuid": "^8.3.4",
+    "axios": "^0.26.1",
+    "electron-json-storage": "^4.5.0",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/electron-json-storage": "^4.5.0",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.0",
     "autoprefixer": "^10.3.5",
