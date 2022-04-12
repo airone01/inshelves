@@ -1,16 +1,16 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
+import React from 'react'
+import type { AppProps } from 'next/app'
 
-import UI from '../components/UI';
+import Ui from '../components/UI'
 
-import '../styles/globals.css';
+import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp ({ Component, pageProps }: AppProps): React.ReactElement {
   return (
     <>
-      <UI>
+      <Ui>
         <Component {...pageProps} />
-      </UI>
+      </Ui>
     </>
   )
 }

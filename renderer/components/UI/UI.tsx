@@ -1,15 +1,11 @@
-import os from 'os';
-import React from 'react';
+import os from 'os'
+import React from 'react'
 
-import SideBar from './SideBar';
-import TitleBar from './TitleBar';
+import SideBar from './SideBar'
+import TitleBar from './TitleBar'
 
 class UI extends React.Component {
-  constructor (props) {
-    super(props);
-  }
-
-  render () {
+  render (): React.ReactElement {
     return (
       <>
         <SideBar />
@@ -22,4 +18,4 @@ class UI extends React.Component {
   }
 }
 
-export default UI;
+export default UI

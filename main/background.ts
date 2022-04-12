@@ -1,45 +1,45 @@
-import { BrowserWindow, app, ipcMain } from 'electron';
-import serve from 'electron-serve';
-import { createWindow } from './helpers';
+import { BrowserWindow, app, ipcMain } from 'electron'
+import serve from 'electron-serve'
+import { createWindow } from './helpers'
 
-const isProd: boolean = process.env.NODE_ENV === 'production';
+const isProd: boolean = process.env.NODE_ENV === 'production'
 
 if (isProd) {
-  serve({ directory: 'app' });
+  serve({ directory: 'app' })
 } else {
-  app.setPath('userData', `${app.getPath('userData')} (development)`);
+  app.setPath('userData', `${app.getPath('userData')} (development)`)
 }
 
 (async () => {
-  await app.whenReady();
+  await app.whenReady()
 
   const mainWindow = createWindow('main', {
     width: 1000,
-    height: 600,
-  });
+    height: 600
+  })
 
   if (isProd) {
-    await mainWindow.loadURL('app://./home.html');
+    await mainWindow.loadURL('app://./home.html')
   } else {
-    const port = process.argv[2];
-    await mainWindow.loadURL(`http://localhost:${port}/home`);
-    mainWindow.webContents.openDevTools();
+    const port = process.argv[2]
+    await mainWindow.loadURL(`http://localhost:${port}/home`)
+    mainWindow.webContents.openDevTools()
   }
-})();
+})()
 
 app.on('window-all-closed', () => {
-  app.quit();
-});
+  app.quit()
+})
 
 ipcMain.on('win_close', () => {
-  app.quit();
-});
+  app.quit()
+})
 
 ipcMain.on('win_max', () => {
-  const win = BrowserWindow.getFocusedWindow();
-  win.isMaximized() ? win.unmaximize() : win.maximize();
-});
+  const win = BrowserWindow.getFocusedWindow()
+  win.isMaximized() ? win.unmaximize() : win.maximize()
+})
 
 ipcMain.on('win_min', () => {
-  BrowserWindow.getFocusedWindow().minimize();
-});
+  BrowserWindow.getFocusedWindow().minimize()
+})

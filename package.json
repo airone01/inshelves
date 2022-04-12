@@ -30,7 +30,14 @@
     "postcss": "^8.3.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "standard": "^16.0.4",
     "tailwindcss": "^2.2.15",
+    "ts-standard": "^11.0.0",
     "typescript": "^4.6.2"
+  },
+  "ts-standard": {
+    "ignore": [
+      "./renderer/next-env.d.ts"
+    ]
   }
 }

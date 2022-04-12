@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import Game from '../../utils/Game';
+import Game from '../../utils/Game'
 
 class GridItem extends React.Component<{ game: Game }, {}> {
-  private game: Game;
+  private game: Game
 
-  public render () {
-    this.game = this.props.game;
+  public render (): React.ReactElement {
+    this.game = this.props.game
 
     return (
       <div className='game-item relative group'>
@@ -17,4 +17,4 @@ class GridItem extends React.Component<{ game: Game }, {}> {
   }
 }
 
-export default GridItem;
+export default GridItem

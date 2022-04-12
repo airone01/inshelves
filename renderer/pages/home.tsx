@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import GridLibrary from '../components/GridLibrary';
+import GridLibrary from '../components/GridLibrary'
 
-function Home(): React.ReactElement {
+function Home (): React.ReactElement {
   return (
     <>
       <GridLibrary />
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
