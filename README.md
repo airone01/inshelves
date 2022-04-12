@@ -30,7 +30,7 @@ $ yarn dev
     * [X] KDE (bruh)
 * [X] Sidebar
 * [X] Game list
-* [ ] Game page
+* [ ] **Game page (current, WIP)**
 * [ ] Quicksearch (search bar)
 * [X] Responsivity (kinda)
 * [ ] Game stores integrations:
