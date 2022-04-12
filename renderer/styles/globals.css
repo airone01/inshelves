@@ -52,9 +52,6 @@ body {
     height: calc(100% - 2rem);
     width: calc(100% - 2rem);
   }
-  .game-item:hover {
-    @apply cursor-pointer;
-  }
   .game-item:hover > div {
     @apply transform scale-105;
   }

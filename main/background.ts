@@ -43,3 +43,11 @@ ipcMain.on('win_max', () => {
 ipcMain.on('win_min', () => {
   BrowserWindow.getFocusedWindow().minimize()
 })
+
+ipcMain.on('nav_back', () => {
+  BrowserWindow.getFocusedWindow().webContents.goBack()
+})
+
+ipcMain.on('nav_forth', () => {
+  BrowserWindow.getFocusedWindow().webContents.goForward()
+})
