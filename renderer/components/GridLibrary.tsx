@@ -12,7 +12,7 @@ function GridLibrary (): React.ReactElement {
     <div className='game-grid p-1'>
       {list.map(e =>
         <GridItem key={uuidv4()}>
-          <img src={e ? e.img ? e.img : '' : ''}></img>
+          <img src={e ? e.img ? e.img : '' : ''} />
         </GridItem>
       )}
     </div>
