@@ -4,13 +4,14 @@ I'm pretty disapointed at Steam all the videogame clients and stores, so I decid
 
 ## Current state
 
-![Demo of the current state of the UI](https://i.imgur.com/yzVxSHs.png)
+![Demo of the current state of the UI](https://i.imgur.com/zHpZXHU.png)
 
 ## Try it yourself
 
 ```bash
 # clone the repo
-$ git clone
+$ git clone https://github.com/AirOne01/inshelves
+$ cd inshelves
 
 # install the dependencies
 $ yarn
@@ -23,12 +24,13 @@ $ yarn dev
 
 * [ ] Native UI support for:
   * [X] Windows
-  * [ ] OSX
-  * [ ] Linux ?
-    * [ ] GNOME
-    * [ ] KDE (bruh)
+  * [ ] OSX (not tested)
+  * [X] Linux ?
+    * [X] GNOME
+    * [X] KDE (bruh)
 * [X] Sidebar
-* [ ] Game list (UI)
+* [X] Game list
+* [ ] Game page
 * [ ] Quicksearch (search bar)
 * [X] Responsivity (kinda)
 * [ ] Game stores integrations:

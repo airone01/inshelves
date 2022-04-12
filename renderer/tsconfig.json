@@ -4,7 +4,7 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
   },
   "extends": "../tsconfig.json",
   "include": [

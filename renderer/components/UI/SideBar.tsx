@@ -16,7 +16,7 @@ const tabs: React.ReactElement[] = [
 
 function SideBar (): React.ReactElement {
   return (
-    <div className='fixed top-0 left-0 h-screen w-12 flex flex-col bg-gray-800 shadow-lg'>
+    <div className='fixed top-0 left-0 h-screen w-12 flex flex-col bg-gray-800'>
       <div className='flex flex-row justify-evenly items-center h-8 w-12 no-select no-drag'>
         <button className='h-full w-full flex justify-center items-center hover:bg-gray-700 title-button'>
           <svg fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='2'>

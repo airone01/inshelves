@@ -48,20 +48,23 @@ body {
     @apply object-cover w-full overflow-hidden;
     aspect-ratio: 59/81;
   }
-  .game-item div {
+  .game-item > div {
     height: calc(100% - 2rem);
     width: calc(100% - 2rem);
   }
-  .game-item:hover div {
+  .game-item:hover {
+    @apply cursor-pointer;
+  }
+  .game-item:hover > div {
     @apply transform scale-105;
   }
-  .game-item:hover div:first-child {
+  .game-item:hover > div:first-child {
     @apply scale-110 opacity-50;
   }
-  .sidebar-item div:first-child {
+  .sidebar-item > div:first-child {
     @apply z-0;
   }
-  .sidebar-item:hover div:first-child {
+  .sidebar-item:hover > div:first-child {
     @apply z-20;
   }
   .sidebar-item button {
