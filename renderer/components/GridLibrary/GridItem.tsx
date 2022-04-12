@@ -4,7 +4,7 @@ import React from 'react'
 import Game from '../../utils/Game'
 
 class GridItem extends React.Component<{ game: Game }, {}> {
-  private game: Game
+  private readonly game: Game
 
   constructor (props: { game: Game }) {
     super(props)

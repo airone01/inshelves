@@ -1,10 +1,9 @@
-import { ReadStream } from 'fs'
 import Link from 'next/link'
 import React from 'react'
 
 class SideBarItem extends React.Component<{ item: { svg: React.ReactElement, link: string }}, {}> {
-  private link: string
-  private svg: React.ReactElement
+  private readonly link: string
+  private readonly svg: React.ReactElement
 
   constructor (props: any) {
     super(props)
