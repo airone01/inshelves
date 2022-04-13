@@ -16,6 +16,7 @@
     "electron-json-storage": "^4.5.0",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.1",
+    "firebase": "^9.6.10",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
