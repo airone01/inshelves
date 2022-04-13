@@ -1,7 +1,7 @@
-import { BrowserWindow, app as eApp, ipcMain } from 'electron'
+import { BrowserWindow, app as elApp, ipcMain, IpcMainEvent } from 'electron'
 import serve from 'electron-serve'
 import { initializeApp } from 'firebase/app'
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, UserCredential } from 'firebase/auth'
 
 import { createWindow } from './helpers'
 
@@ -10,11 +10,11 @@ const isProd: boolean = process.env.NODE_ENV === 'production'
 if (isProd) {
   serve({ directory: 'app' })
 } else {
-  eApp.setPath('userData', `${eApp.getPath('userData')} (development)`)
+  elApp.setPath('userData', `${elApp.getPath('userData')} (development)`)
 }
 
 (async () => {
-  await eApp.whenReady()
+  await elApp.whenReady()
 
   const mainWindow = createWindow('main', {
     width: 1000,
@@ -30,12 +30,12 @@ if (isProd) {
   }
 })()
 
-eApp.on('window-all-closed', () => {
-  eApp.quit()
+elApp.on('window-all-closed', () => {
+  elApp.quit()
 })
 
 ipcMain.on('win_close', () => {
-  eApp.quit()
+  elApp.quit()
 })
 
 ipcMain.on('win_max', () => {
@@ -55,7 +55,7 @@ ipcMain.on('nav_forth', () => {
   BrowserWindow.getFocusedWindow().webContents.goForward()
 })
 
-const fApp = initializeApp({
+const fbApp = initializeApp({
   apiKey: "AIzaSyDhGCD9FM6pX-keua8oeKLQXmCl43a17co",
   authDomain: "inshelves-3eac8.firebaseapp.com",
   projectId: "inshelves-3eac8",
@@ -64,4 +64,9 @@ const fApp = initializeApp({
   appId: "1:369970716341:web:e60240dd446e11197da8fc"
 });
 
-const auth = getAuth(fApp);
+const fb_auth = getAuth(fbApp);
+
+ipcMain.on('fb_register', (event: IpcMainEvent, username: string, password: string) => {
+  createUserWithEmailAndPassword(fb_auth, username, password)
+    .then((c) => creds = c)
+})
