@@ -1,2 +1,2 @@
-import GridLibrary from './GridLibrary'
+import GridLibrary from './Grid'
 export default GridLibrary
