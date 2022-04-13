@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-import Game from '../../utils/Game'
+import { Game } from '../../utils/Game'
 
 class GridItem extends React.Component<{ game: Game }, {}> {
   private readonly game: Game

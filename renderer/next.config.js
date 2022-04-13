@@ -8,5 +8,19 @@ module.exports = {
     }
 
     return config
+  },
+  async redirects () {
+    return [
+      {
+        source: '/',
+        destination: '/grid',
+        permanent: true
+      },
+      {
+        source: '/home',
+        destination: '/grid',
+        permanent: true
+      }
+    ]
   }
 }

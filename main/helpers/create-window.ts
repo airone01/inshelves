@@ -68,7 +68,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
 
   state = ensureVisibleOnSomeDisplay(restore())
 
-  const browserOptions: BrowserWindowConstructorOptions = {
+  win = new BrowserWindow({
     ...options,
     ...state,
     titleBarStyle: os.platform() === 'win32' ? 'hidden' : 'default',
@@ -78,8 +78,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
       contextIsolation: false,
       ...options.webPreferences
     }
-  }
-  win = new BrowserWindow(browserOptions)
+  })
   win.setMenu(null)
   win.webContents.openDevTools()
 
