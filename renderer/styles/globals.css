@@ -8,7 +8,7 @@
 
 html,
 body {
-  @apply bg-gray-500 text-white no-drag no-select;
+  @apply bg-gray-500 text-white no-drag no-select h-full w-full;
 }
 
 /* Write your own custom component styles here */
@@ -71,7 +71,7 @@ body {
     @apply z-30;
   }
   .sidebar-item button svg {
-    @apply h-6 w-6 text-white smooth duration-300 z-40;
+    @apply w-2/3 text-white smooth duration-300 z-40;
   }
   .sidebar-item:hover button svg {
     @apply text-black;
