@@ -22,5 +22,10 @@ module.exports = {
         permanent: true
       }
     ]
+  },
+  images: {
+    domains: [
+      'cdn2.steamgriddb.com'
+    ]
   }
 }
