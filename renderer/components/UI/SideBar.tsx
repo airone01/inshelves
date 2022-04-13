@@ -46,7 +46,7 @@ const bottomTabs: Array<{ svg: React.ReactElement, link: string }> = [
 
 function SideBar (): React.ReactElement {
   return (
-    <div className='h-full w-16 bg-gray-800'>
+    <div className='h-full w-16 flex flex-col bg-gray-800'>
       <div className='flex flex-row pb-1 no-select no-drag'>
         <button className='h-full w-full flex justify-center items-center hover:bg-gray-700 title-button' onClick={(e) => { e.preventDefault(); ipcRenderer.send('nav_back') }}>
           <svg fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='2'>
