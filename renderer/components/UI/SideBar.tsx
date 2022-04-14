@@ -26,14 +26,15 @@ const topTabs: Array<{ svg: React.ReactElement, link: string }> = [
     link: '/grid/steam'
   }
 ]
-const bottomTabs: Array<{ svg: React.ReactElement, link: string }> = [
+const bottomTabs: Array<{ svg: React.ReactElement, link: string, color?: 'group-hover:bg-blue-500' | 'group-hover:bg-red-500' | 'group-hover:bg-yellow-500' }> = [
   {
     svg:
   <svg className='stroke-current' fill='none' viewBox='0 0 24 24' strokeWidth={2}>
     <path strokeLinecap='round' strokeLinejoin='round' d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />
     <path strokeLinecap='round' strokeLinejoin='round' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
   </svg>,
-    link: '/settings'
+    link: '/settings',
+    color: 'group-hover:bg-yellow-500'
   },
   {
     svg:
@@ -62,12 +63,12 @@ function SideBar (): React.ReactElement {
       <div className='flex flex-col justify-between h-full'>
         <ul className='flex flex-col justify-start items-center'>
           {topTabs.map(e =>
-            <SideBarItem key={v4()} {...e} />
+            <SideBarItem key={v4()} {...e} color='group-hover:bg-blue-500' />
           )}
         </ul>
         <ul className='flex flex-col justify-start items-center'>
           {bottomTabs.map(e =>
-            <SideBarItem key={v4()} {...e} red />
+            <SideBarItem key={v4()} {...e} color={e.color ?? 'group-hover:bg-red-500'} />
           )}
         </ul>
       </div>

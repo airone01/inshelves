@@ -1,7 +1,9 @@
 import { ipcRenderer } from 'electron'
 import React, { useState } from 'react'
 
-function LoginForm (): React.ReactElement {
+type title = 'LOGIN 🔓' | 'REGISTER 🎉'
+
+function LoginForm (props: { messageTitle: title }): React.ReactElement {
   const [email, setEmail] = useState('')
   const [passwd, setPasswd] = useState('')
 
@@ -14,7 +16,7 @@ function LoginForm (): React.ReactElement {
         <input type='password' value={passwd} onChange={(e) => setPasswd(e.target.value)} placeholder='Password' className='w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none' />
       </div>
       <div className='flex flex-row justify-center'>
-        <button className='transform rounded-md bg-indigo-600 py-2 px-1 font-bold duration-300 hover:bg-indigo-400'>OK</button>
+        <button className='transform rounded-md bg-indigo-600 py-2 px-1 font-bold duration-300 hover:bg-indigo-400'>{props.messageTitle}</button>
       </div>
     </form>
   )

@@ -1,14 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
 
-class SideBarItem extends React.Component<{ svg: React.ReactElement, link: string, red?: true }, {}> {
-  private readonly color: 'group-hover:bg-blue-500' | 'group-hover:bg-red-500'
+type C = 'group-hover:bg-blue-500' | 'group-hover:bg-red-500' | 'group-hover:bg-yellow-500'
+
+class SideBarItem extends React.Component<{ svg: React.ReactElement, link: string, color: C }, {}> {
+  private readonly color: C
 
   constructor (props: any) {
     super(props)
 
-    if (this.props.red ?? false) this.color = 'group-hover:bg-red-500'
-    else this.color = 'group-hover:bg-blue-500'
+    this.color = this.props.color
   }
 
   public render (): React.ReactElement {
