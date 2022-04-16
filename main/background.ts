@@ -69,4 +69,5 @@ let creds: UserCredential
 
 ipcMain.on('fb_register', (_event: IpcMainEvent, username: string, password: string) =>
   createUserWithEmailAndPassword(fb_auth, username, password)
-    .then((c) => creds = c))
+    .then((c) => creds = c)
+    .catch((e) => console.log))
