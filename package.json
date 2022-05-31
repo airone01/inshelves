@@ -1,44 +1,22 @@
 {
+  "name": "inshelves",
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
-  "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
-  "main": "app/background.js",
+  "version": "0.0.0",
   "scripts": {
-    "dev": "nextron",
-    "build": "nextron build",
-    "postinstall": "electron-builder install-app-deps"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
   },
   "dependencies": {
-    "@types/uuid": "^8.3.4",
-    "axios": "^0.26.1",
-    "electron-json-storage": "^4.5.0",
-    "electron-serve": "^1.1.0",
-    "electron-store": "^8.0.1",
-    "firebase": "^9.6.10",
-    "uuid": "^8.3.2"
+    "@tauri-apps/api": "^1.0.0-rc.6",
+    "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@types/electron-json-storage": "^4.5.0",
-    "@types/node": "^14.14.31",
-    "@types/react": "^17.0.0",
-    "autoprefixer": "^10.3.5",
-    "electron": "^17.1.2",
-    "electron-builder": "23.0.2",
-    "next": "^12.1.0",
-    "nextron": "^8.0.0",
-    "postcss": "^8.3.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "standard": "^16.0.4",
-    "tailwindcss": "^2.2.15",
-    "ts-standard": "^11.0.0",
-    "typescript": "^4.6.2"
-  },
-  "ts-standard": {
-    "ignore": [
-      "./renderer/next-env.d.ts"
-    ]
+    "@tauri-apps/cli": "^1.0.0-rc.13",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.34.7"
   }
 }
