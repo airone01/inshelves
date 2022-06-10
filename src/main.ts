@@ -1,9 +1,16 @@
-import { app } from '@tauri-apps/api'
 import { createApp } from 'vue'
+
 import App from './App.vue'
 import Sidebar from './components/Sidebar.vue'
+
+// Global CSS
 import './index.css'
 
-const tApp = createApp(App)
-tApp.component('Sidebar', Sidebar)
-const mountedApp = tApp.mount('#app')
+// Create app
+const vApp = createApp(App)
+
+// Register components
+vApp.component('Sidebar', Sidebar)
+
+// Mount app
+const mountedApp = vApp.mount('#app')
