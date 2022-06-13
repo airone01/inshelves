@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class='flex flex-row w-full h-screen bg-gray-900'>
+  <div class='w-full h-screen bg-gray-900'>
     <Sidebar />
   </div>
 </template>
