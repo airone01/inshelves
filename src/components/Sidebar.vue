@@ -1,5 +1,5 @@
 <script lang="ts">
-import { ref } from "vue";
+import draggable from "vuedraggable";
 
 import SidebarItem from "./SidebarItem.vue";
 
@@ -9,59 +9,45 @@ import epicgamesLogo from "../assets/icons/epicgames.png";
 import homeLogo from "../assets/icons/home.png";
 import steamLogo from "../assets/icons/steam.png";
 
-const dragged = ref<any>(null);
-let dragging = false;
-
-const dragStart = (e: any, ind: number | string) => {
-  e.dataTransfer.setData("text/plain", ind);
-  e.target.style.opacity = 0.5;
-  e.target.classList.add("animate-bounce");
-  dragged.value = e.target;
-  dragging = true;
-};
-
-const dragEnd = (e: any) => {
-  e.target.style.opacity = 1;
-  e.target.classList.remove("animate-bounce");
-  dragging = false;
-};
-
-const drop = (e: any) => {
-  dragged.value.style.opacity = 1;
-  // dragged.value.parentNode.removeChild(dragged.value);
-  // e.target.appendChild(dragged.value);
-};
-
 export default {
+  name: "sidebar",
+  display: "Sidebar",
+  components: {
+    SidebarItem,
+    draggable,
+  },
   data() {
     return {
-      dragStart,
-      dragEnd,
-      drop,
       buttonsTop: [
         {
           name: "Home",
           icon: homeLogo,
           route: "/",
           color: "blue",
+          id: 0,
         },
         {
           name: "Downloads",
           icon: downloadLogo,
           route: "/downloads",
           color: "blue",
+          id: 1,
         },
+      ],
+      buttonsTopDraggable: [
         {
           name: "Steam",
           icon: steamLogo,
           route: "/steam",
           color: "blue",
+          id: 2,
         },
         {
           name: "Epic Games",
           icon: epicgamesLogo,
           route: "/epic",
           color: "blue",
+          id: 3,
         },
       ],
       buttonsBot: [
@@ -72,44 +58,53 @@ export default {
           color: "yellow",
         },
       ],
-      components: {
-        SidebarItem,
-      },
+      drag: false,
     };
   },
 };
 </script>
 
 <template>
-  <div class="h-screen max-h-screen w-12 bg-gray-800 flex flex-col relative">
+  <div class="h-screen max-h-screen w-12 bg-gray-800 flex flex-col relative select-none">
     <div :style="`height: calc(100vh - ${buttonsBot.length} * 3rem);`">
-      <div v-for="n in buttonsTop" :key="n">
-        <SidebarItem
-          :color="n.color"
-          :icon="n.icon"
-          :name="n.name"
-          :route="n.route"
-          draggable="true"
-          @dragstart='dragStart($event, index)'
-          @dragend='dragEnd($event)'
-        />
-        <div
-          v-if="!dragging"
-          class="h-2 bg-transparent"
-          @dragover.prevent=""
-          @drop.prevent="drop($event)"
-        ></div>
-        <div v-else class="border-2 border-blue-400"></div>
-      </div>
+      <SidebarItem
+        class="mb-2"
+        v-for="e in buttonsTop"
+        :key="e"
+        :color="e.color"
+        :icon="e.icon"
+        :name="e.name"
+        :route="e.route"
+      />
+      <draggable
+        v-model="buttonsTopDraggable"
+        tag="transition-group"
+        :component-data="{ name: 'fade' }"
+        group="buttons"
+        @start="drag = true"
+        @end="drag = false"
+        item-key=""
+      >
+        <template #item="{ element: e }">
+          <SidebarItem
+            class="mb-2"
+            :color="e.color"
+            :icon="e.icon"
+            :name="e.name"
+            :route="e.route"
+          />
+        </template>
+      </draggable>
     </div>
     <div class="absolute bottom-0 z-50">
       <SidebarItem
-        v-for="n in buttonsBot"
-        :key="n"
-        :color="n.color"
-        :icon="n.icon"
-        :name="n.name"
-        :route="n.route"
+        class="mt-2"
+        v-for="e in buttonsBot"
+        :key="e"
+        :color="e.color"
+        :icon="e.icon"
+        :name="e.name"
+        :route="e.route"
       />
     </div>
   </div>

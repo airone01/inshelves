@@ -31,3 +31,13 @@ export default {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 </style>
+
+<style scoped>
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+</style>
