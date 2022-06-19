@@ -64,22 +64,24 @@ export default {
         :name="e.name"
         :route="e.route"
       />
-      <!-- <DraggableComponent
+      <DraggableComponent
         v-model="buttonsTopDraggable"
         group="buttons"
+        item-key="name"
         @start="drag = true"
         @end="drag = false"
       >
-        <SideBarItem
-          v-for="e in buttonsTopDraggable"
-          :key="e.name"
-          :color="e.color"
-          :icon="e.icon"
-          :name="e.name"
-          :route="e.route"
-          class="mb-2"
-        />
-      </DraggableComponent> -->
+        <template #item="{ element: e }">
+          <SideBarItem
+            :key="e.name"
+            :color="e.color"
+            :icon="e.icon"
+            :name="e.name"
+            :route="e.route"
+            class="mb-2"
+          />
+        </template>
+      </DraggableComponent>
     </div>
     <div class="absolute bottom-0 z-50">
       <SideBarItem
