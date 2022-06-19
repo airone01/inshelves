@@ -1,5 +1,10 @@
 <template>
-  <div class="w-full h-screen bg-gray-900">
+  <div>
+    <Head>
+      <Title>Inshelves</Title>
+      <Meta name="description" content="title" />
+      <!-- <Style type="text/css" /> -->
+    </Head>
     <SideBar />
   </div>
 </template>
@@ -7,3 +12,9 @@
 <script setup>
 import '@/assets/css/main.css'
 </script>
+
+<style>
+body {
+  @apply bg-gray-900;
+}
+</style>
