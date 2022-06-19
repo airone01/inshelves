@@ -54,7 +54,7 @@ export default {
   <div
     class="h-screen max-h-screen w-12 bg-gray-800 flex flex-col relative select-none"
   >
-    <div :style="`height: calc(100vh - ${buttonsBot.length} * 3rem);`">
+    <!-- <div :style="`height: calc(100vh - ${buttonsBot.length} * 3rem);`">
       <SideBarItem
         v-for="e in buttonsTop"
         :key="e"
@@ -91,6 +91,6 @@ export default {
         :name="e.name"
         :route="e.route"
       />
-    </div>
+    </div> -->
   </div>
 </template>
