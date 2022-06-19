@@ -47,6 +47,16 @@ export default {
       drag: false,
     }
   },
+  computed: {
+    dragOptions() {
+      return {
+        animation: 200,
+        group: 'description',
+        disabled: false,
+        ghostClass: 'ghost',
+      }
+    },
+  },
 }
 </script>
 
@@ -66,8 +76,14 @@ export default {
       />
       <DraggableComponent
         v-model="buttonsTopDraggable"
+        :component-data="{
+          tag: 'ul',
+          type: 'transition-group',
+          name: !drag ? 'flip-list' : null,
+        }"
         group="buttons"
         item-key="name"
+        :drag-options="dragOptions"
         @start="drag = true"
         @end="drag = false"
       >
@@ -96,3 +112,25 @@ export default {
     </div>
   </div>
 </template>
+
+<style scoped>
+.flip-list-move {
+  transition: transform 0.5s;
+}
+.no-move {
+  transition: transform 0s;
+}
+
+.ghost {
+}
+
+.list-group {
+  min-height: 20px;
+}
+.list-group-item {
+  cursor: move;
+}
+.list-group-item i {
+  cursor: pointer;
+}
+</style>
