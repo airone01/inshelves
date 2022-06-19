@@ -2,9 +2,9 @@
 
 I'm pretty disapointed at Steam all the videogame clients and stores, so I decided to make mine.
 
-## Current state
+## (Not) Current state
 
-![Demo of the current state of the UI](https://i.imgur.com/zHpZXHU.png)
+![Demo](https://i.imgur.com/zHpZXHU.png)
 
 ## Try it yourself
 
@@ -23,16 +23,16 @@ $ yarn dev
 ## TODO / Milestones
 
 * [ ] Native UI support for:
-  * [X] Windows
+  * [ ] Windows
   * [ ] OSX (not tested)
-  * [X] Linux ?
-    * [X] GNOME
-    * [X] KDE (bruh)
+  * [ ] Linux ?
+    * [ ] GNOME
+    * [ ] KDE (bruh)
 * [X] Sidebar
-* [X] Game list
-* [ ] **Game page (current, WIP)**
+* [ ] Game list
+* [ ] Game page (WIP)
 * [ ] Quicksearch (search bar)
-* [X] Responsivity (kinda)
+* [X] Responsivity
 * [ ] Game stores integrations:
   * [ ] Steam
   * [ ] Epic Games
