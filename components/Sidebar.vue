@@ -55,7 +55,7 @@ export default {
     class="h-screen max-h-screen w-12 bg-gray-800 flex flex-col relative select-none"
   >
     <div :style="`height: calc(100vh - ${buttonsBot.length} * 3rem);`">
-      <SidebarItem
+      <SideBarItem
         v-for="e in buttonsTop"
         :key="e"
         class="mb-2"
@@ -67,22 +67,24 @@ export default {
       <DraggableComponent
         v-model="buttonsTopDraggable"
         group="buttons"
+        item-key="name"
         @start="drag = true"
         @end="drag = false"
       >
-        <SidebarItem
-          v-for="e in buttonsTopDraggable"
-          :key="e.name"
-          :color="e.color"
-          :icon="e.icon"
-          :name="e.name"
-          :route="e.route"
-          class="mb-2"
-        />
+        <template #item="{ element: e }">
+          <SideBarItem
+            :key="e.name"
+            :color="e.color"
+            :icon="e.icon"
+            :name="e.name"
+            :route="e.route"
+            class="mb-2"
+          />
+        </template>
       </DraggableComponent>
     </div>
     <div class="absolute bottom-0 z-50">
-      <SidebarItem
+      <SideBarItem
         v-for="e in buttonsBot"
         :key="e"
         class="mt-2"

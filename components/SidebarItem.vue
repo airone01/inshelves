@@ -36,7 +36,7 @@ export default {
       <div
         class="w-full h-full absolute top-0 left-0 flex flex-row justify-center items-center transition z-50 group-hover:z-20"
       >
-        <nuxt-img
+        <img
           :src="icon"
           class="w-2/3 h-2/3 group-hover:invert transition duration-200 z-50"
         />
