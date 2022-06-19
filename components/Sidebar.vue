@@ -1,62 +1,64 @@
 <script lang="ts">
 export default {
-  name: "sidebar",
-  display: "Sidebar",
+  name: 'SideBar',
+  display: 'SideBar',
   data() {
     return {
       buttonsTop: [
         {
-          name: "Home",
-          icon: "home.png",
-          route: "/",
-          color: "blue",
+          name: 'Home',
+          icon: 'home.png',
+          route: '/',
+          color: 'blue',
           id: 0,
         },
         {
-          name: "Downloads",
-          icon: "download.png",
-          route: "/downloads",
-          color: "blue",
+          name: 'Downloads',
+          icon: 'download.png',
+          route: '/downloads',
+          color: 'blue',
           id: 1,
         },
       ],
       buttonsTopDraggable: [
         {
-          name: "Steam",
-          icon: "steam.png",
-          route: "/steam",
-          color: "blue",
+          name: 'Steam',
+          icon: 'steam.png',
+          route: '/steam',
+          color: 'blue',
           id: 2,
         },
         {
-          name: "Epic Games",
-          icon: "epicgames.png",
-          route: "/epic",
-          color: "blue",
+          name: 'Epic Games',
+          icon: 'epicgames.png',
+          route: '/epic',
+          color: 'blue',
           id: 3,
         },
       ],
       buttonsBot: [
         {
-          name: "Login",
-          icon: "account.png",
-          route: "/login",
-          color: "yellow",
+          name: 'Login',
+          icon: 'account.png',
+          route: '/login',
+          color: 'yellow',
         },
       ],
       drag: false,
-    };
+    }
   },
-};
+}
 </script>
 
 <template>
-  <div class="h-screen max-h-screen w-12 bg-gray-800 flex flex-col relative select-none">
+  <div
+    class="h-screen max-h-screen w-12 bg-gray-800 flex flex-col relative select-none"
+  >
     <div :style="`height: calc(100vh - ${buttonsBot.length} * 3rem);`">
       <SidebarItem
-        class="mb-2"
         v-for="e in buttonsTop"
         :key="e"
+        class="mb-2"
         :color="e.color"
         :icon="e.icon"
         :name="e.name"
@@ -71,19 +73,19 @@ export default {
         <SidebarItem
           v-for="e in buttonsTopDraggable"
           :key="e.name"
-          class="mb-2"
           :color="e.color"
           :icon="e.icon"
           :name="e.name"
           :route="e.route"
+          class="mb-2"
         />
       </DraggableComponent>
     </div>
     <div class="absolute bottom-0 z-50">
       <SidebarItem
-        class="mt-2"
         v-for="e in buttonsBot"
         :key="e"
+        class="mt-2"
         :color="e.color"
         :icon="e.icon"
         :name="e.name"

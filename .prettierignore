@@ -94,3 +94,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Tauri source
+src-tauri/target
+src-tauri/WixTools

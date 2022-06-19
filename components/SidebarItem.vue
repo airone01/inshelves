@@ -1,15 +1,45 @@
 <script>
 export default {
-  props: ['color', 'icon', 'name', 'route']
+  name: 'SideBarItem',
+  display: 'SideBarItem',
+  props: {
+    color: {
+      type: String,
+      default: 'blue',
+      required: false,
+    },
+    icon: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    route: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
 <template>
   <div class="h-12 w-12 rounded-lg transition duration-200 group">
-    <a :class="`h-full w-full relative flex flex-row items-center justify-center text-white bg-slate-800 rounded-lg transition duration-200 z-40 group-hover:z-0 ins-${color}`" :href="route">
-      <div :class="`w-full h-full absolute top-0 left-0 blur-md transition duration-200 z-40 group-hover:z-10 ins-${color}`"></div>
-      <div class="w-full h-full absolute top-0 left-0 flex flex-row justify-center items-center transition z-50 group-hover:z-20">
-        <nuxt-img :src="icon" class="w-2/3 h-2/3 group-hover:invert transition duration-200 z-50" />
+    <a
+      :class="`h-full w-full relative flex flex-row items-center justify-center text-white bg-slate-800 rounded-lg transition duration-200 z-40 group-hover:z-0 ins-${color}`"
+      :href="route"
+    >
+      <div
+        :class="`w-full h-full absolute top-0 left-0 blur-md transition duration-200 z-40 group-hover:z-10 ins-${color}`"
+      ></div>
+      <div
+        class="w-full h-full absolute top-0 left-0 flex flex-row justify-center items-center transition z-50 group-hover:z-20"
+      >
+        <nuxt-img
+          :src="icon"
+          class="w-2/3 h-2/3 group-hover:invert transition duration-200 z-50"
+        />
       </div>
     </a>
   </div>
