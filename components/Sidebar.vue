@@ -1,34 +1,20 @@
 <script lang="ts">
-import draggable from "vuedraggable";
-
-import SidebarItem from "./SidebarItem.vue";
-
-import accountLogo from "../assets/icons/account.png";
-import downloadLogo from "../assets/icons/download.png";
-import epicgamesLogo from "../assets/icons/epicgames.png";
-import homeLogo from "../assets/icons/home.png";
-import steamLogo from "../assets/icons/steam.png";
-
 export default {
   name: "sidebar",
   display: "Sidebar",
-  components: {
-    SidebarItem,
-    draggable,
-  },
   data() {
     return {
       buttonsTop: [
         {
           name: "Home",
-          icon: homeLogo,
+          icon: "home.png",
           route: "/",
           color: "blue",
           id: 0,
         },
         {
           name: "Downloads",
-          icon: downloadLogo,
+          icon: "download.png",
           route: "/downloads",
           color: "blue",
           id: 1,
@@ -37,14 +23,14 @@ export default {
       buttonsTopDraggable: [
         {
           name: "Steam",
-          icon: steamLogo,
+          icon: "steam.png",
           route: "/steam",
           color: "blue",
           id: 2,
         },
         {
           name: "Epic Games",
-          icon: epicgamesLogo,
+          icon: "epicgames.png",
           route: "/epic",
           color: "blue",
           id: 3,
@@ -53,7 +39,7 @@ export default {
       buttonsBot: [
         {
           name: "Login",
-          icon: accountLogo,
+          icon: "account.png",
           route: "/login",
           color: "yellow",
         },
@@ -76,25 +62,22 @@ export default {
         :name="e.name"
         :route="e.route"
       />
-      <draggable
+      <DraggableComponent
         v-model="buttonsTopDraggable"
-        tag="transition-group"
-        :component-data="{ name: 'fade' }"
         group="buttons"
         @start="drag = true"
         @end="drag = false"
-        item-key=""
       >
-        <template #item="{ element: e }">
-          <SidebarItem
-            class="mb-2"
-            :color="e.color"
-            :icon="e.icon"
-            :name="e.name"
-            :route="e.route"
-          />
-        </template>
-      </draggable>
+        <SidebarItem
+          v-for="e in buttonsTopDraggable"
+          :key="e.name"
+          class="mb-2"
+          :color="e.color"
+          :icon="e.icon"
+          :name="e.name"
+          :route="e.route"
+        />
+      </DraggableComponent>
     </div>
     <div class="absolute bottom-0 z-50">
       <SidebarItem
