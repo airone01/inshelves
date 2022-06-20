@@ -22,7 +22,7 @@ $ yarn dev
 
 ## TODO / Milestones
 
-- [X] Native UI (tauri)
+- [x] Native UI (tauri)
   - [ ] Windows-specific UI
   - [ ] OSX-specific UI
   - [ ] GNOME-specific UI

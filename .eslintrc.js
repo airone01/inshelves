@@ -9,7 +9,11 @@ module.exports = {
     'plugin:nuxt/recommended',
     'prettier',
   ],
-  ignorePatterns: ['src-tauri/target/**/*.js', 'src-tauri/WixTools/**/*.js', '.output/**/*.js'],
+  ignorePatterns: [
+    'src-tauri/target/**/*.js',
+    'src-tauri/WixTools/**/*.js',
+    '.output/**/*.js',
+  ],
   plugins: [],
   // add your custom rules here
   rules: {},
