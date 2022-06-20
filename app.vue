@@ -3,7 +3,6 @@
     <Head>
       <Title>Inshelves</Title>
       <Meta name="description" content="title" />
-      <!-- <Style type="text/css" /> -->
     </Head>
     <SideBar />
   </div>

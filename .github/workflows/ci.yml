@@ -48,5 +48,6 @@ jobs:
       - name: Run linter 👀
         run: yarn lint
 
-      - name: Run tests 🧪
-        run: yarn test
+      - name: Run tests (not implemented) 🧪
+        run: echo Tests are not yet implemented in Nuxt 3.
+        # run: yarn test
