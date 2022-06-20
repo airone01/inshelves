@@ -98,3 +98,6 @@ sw.*
 # Tauri source
 src-tauri/target
 src-tauri/WixTools
+
+# Nuxi output
+.output
