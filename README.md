@@ -4,7 +4,7 @@ I'm pretty disapointed at Steam all the videogame clients and stores, so I decid
 
 ## (Not) Current state
 
-![Demo](https://i.imgur.com/zHpZXHU.png)
+![Demo](https://i.imgur.com/JDeg8wd.png)
 
 ## Try it yourself
 
@@ -22,12 +22,11 @@ $ yarn dev
 
 ## TODO / Milestones
 
-- [ ] Native UI support for:
-  - [ ] Windows
-  - [ ] OSX (not tested)
-  - [ ] Linux ?
-    - [ ] GNOME
-    - [ ] KDE (bruh)
+- [X] Native UI (tauri)
+  - [ ] Windows-specific UI
+  - [ ] OSX-specific UI
+  - [ ] GNOME-specific UI
+  - [ ] KDE-specific UI
 - [x] Sidebar
 - [ ] Game list
 - [ ] Game page (WIP)
