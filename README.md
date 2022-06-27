@@ -2,7 +2,7 @@
 
 I'm pretty disapointed at Steam all the videogame clients and stores, so I decided to make mine.
 
-## (Not) Current state
+## Current state
 
 ![Demo](https://i.imgur.com/JDeg8wd.png)
 
