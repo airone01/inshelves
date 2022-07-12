@@ -45,7 +45,7 @@ $ yarn dev
     - [ ] Curseforge / Twitch
     - [ ] Badlion, Lunar... (other clients) ?
   - [ ] Itch.io
-  - [ ] osu! / osu!lazer
+  - [ ] osu!
   - [ ] RetroArch
 - [ ] Additional integrations
   - [ ] Achievements / trophies / completitions
