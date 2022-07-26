@@ -20,7 +20,7 @@ $ yarn
 $ yarn dev
 ```
 
-## TODO / Milestones
+## TODO & Milestones
 
 - [x] Native UI (tauri)
   - [ ] Windows-specific UI
@@ -29,8 +29,8 @@ $ yarn dev
   - [ ] KDE-specific UI
 - [x] Sidebar
 - [ ] Game list
-- [ ] Game page (WIP)
-- [ ] Quicksearch (search bar)
+- [ ] Game page
+- [ ] Quicksearch
 - [x] Responsivity
 - [ ] Game stores integrations:
   - [ ] Steam
@@ -44,7 +44,7 @@ $ yarn dev
     - [ ] Minecraft (Windows 10 Edition)
     - [ ] Curseforge / Twitch
     - [ ] Badlion, Lunar... (other clients) ?
-  - [ ] Itch.io
+  - [ ] itch.io
   - [ ] osu! / osu!lazer
   - [ ] RetroArch
 - [ ] Additional integrations
@@ -53,4 +53,4 @@ $ yarn dev
   - [ ] Discord
   - [ ] Install / uninstall games (supported stores)
   - [ ] Game time and tracking
-- [ ] Actual server-sided ideas
+- [X] Actual server-sided ideas
