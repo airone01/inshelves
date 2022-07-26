@@ -53,4 +53,4 @@ $ yarn dev
   - [ ] Discord
   - [ ] Install / uninstall games (supported stores)
   - [ ] Game time and tracking
-- [X] Actual server-sided ideas
+- [x] Actual server-sided ideas
