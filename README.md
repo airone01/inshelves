@@ -1,6 +1,10 @@
+> [!IMPORTANT]  
+> **This project has been abandonned**. I stop working on my projects mostly because of studies and other work.
+> Too much work.
+
 # Inshelves
 
-I'm pretty disapointed at Steam all the videogame clients and stores, so I decided to make mine.
+I'm pretty disapointed in Steam, all the videogame clients and stores, so I decided to make mine.
 
 ## Current state
 
